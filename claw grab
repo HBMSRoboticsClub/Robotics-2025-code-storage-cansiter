@@ -1,0 +1,89 @@
+#include <kipr/wombat.h>
+
+//-------------------------//
+//Made by NF3 (Nick Palmer)//
+//-------------------------//
+
+// Claw Grab 2024 - 2025
+
+int main()
+{
+    printf("Starting . . .\n");
+    printf("Declaring Variables . . .\n");
+
+    int motor1 = 0;
+
+    int timer = 100;
+    int speed = 25;
+
+    int max_angle = 65;
+    int angle = 0;
+
+    printf("Start Program . . .\n");
+
+    if (angle < max_angle){
+    motor(motor1, speed);
+    }
+    else
+
+    msleep(timer);
+   
+if (angle < max_angle){
+    motor(motor1, -speed);
+    }
+    else
+   
+    msleep(timer);
+
+    msleep(150);
+
+    printf("Completed Program . . .\n");
+    printf("Stoping Code . . .\n");
+    printf("Made By NF3 (Nick Palmer)\n");
+
+    return 0;
+}
+
+On Sat, Feb 1, 2025 at 1:56 PM Palmer, Nicholas <31palmernicholas@nmrsd.org> wrote:
+#include <kipr/wombat.h>
+
+//-------------------------//
+//Made by NF3 (Nick Palmer)//
+//-------------------------//
+
+// Claw Grab 2024 - 2025
+
+int main()
+{
+    printf("Starting . . .\n");
+    printf("Declaring Variables . . .\n");
+
+    int motor1 = 0;
+
+    int timer = 100;
+    int speed = 25;
+
+    int max_angle = 65;
+    int angle = 0;
+
+    printf("Start Program . . .\n");
+
+    if (angle < max_angle){
+    motor(motor1, speed);
+    }
+    else
+
+    msleep(timer);
+
+    motor(motor1, -speed);
+
+    msleep(timer);
+
+    msleep(150);
+
+    printf("Completed Program . . .\n");
+    printf("Stoping Code . . .\n");
+    printf("Made By NF3 (Nick Palmer)\n");
+
+    return 0;
+}
