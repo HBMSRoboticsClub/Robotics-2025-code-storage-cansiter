@@ -1,0 +1,52 @@
+#include <kipr/wombat.h>
+int main()
+{
+    int stop = 0;
+    int x;
+    int y;
+    int area;
+    camera_open(); // Opens camera
+    while (stop == 0) // Updates camera image until stop pressed
+    {
+        camera_update();
+        if (get_object_count(0) > 0)
+        {
+            x = get_object_center_x(0,0);
+            y = get_object_center_y(0,0);
+            printf("The center of the object is (%d,%d).\n",x,y);
+        }
+        if (get_object_count(0) > 0)
+        {
+            if (get_object_center_x(0,0) < 310)
+            {
+                motor(1,-25);
+                motor(0,25);
+            }
+            else if (get_object_center_x(0,0) > 330)
+            {
+                motor(1,25);
+                motor(0,-25);
+            }
+            else
+            {
+                stop = 1;
+                ao();
+                if (get_object_count(0) > 0)
+                {
+                    x = get_object_center_x(0,0);
+                    y = get_object_center_y(0,0);
+                    printf("The center of the object is (%d,%d).\n",x,y);
+                }
+            }
+        }
+
+    }
+    while(get_object_area(0,0)<275000)
+    {
+        camera_update();
+         printf("The area of the object is %d.\n",area);
+        motor(0,50);
+        motor(1,50);
+    }
+    return 0;
+}
