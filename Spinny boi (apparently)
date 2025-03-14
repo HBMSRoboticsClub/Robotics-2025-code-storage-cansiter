@@ -1,0 +1,26 @@
+#include <kipr/wombat.h>
+int main()
+{
+    printf("Creating Variables");
+    int speed = 100;
+    int motorL = 1;
+    int motorR = 0;
+   
+    printf("Variables Ready");
+    printf("Starting Code");
+    motor(motorL, speed);
+    motor(motorR, speed);
+    msleep(100000);
+    motor(motorL, -speed);
+    motor(motorR, speed);
+    msleep(100000);
+    motor(motorL, speed);
+    motor(motorR, -speed);
+    msleep(100000);
+    motor(motorL, -speed);
+    motor(motorR, -speed);
+   
+    msleep(1000);
+    printf("Done");
+    return 0;
+}
