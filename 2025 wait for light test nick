@@ -1,0 +1,31 @@
+int main()
+{
+    enable_servo(3);
+   
+    int claw = 3;
+   
+    int motr = 0;
+    int motr2 = 1;
+   
+    int speed = 100;
+   
+    int opened = 35;
+    int closed = 101;
+   
+    msleep(105);
+   
+    set_servo_position(claw, opened);
+   
+    msleep(105);
+   
+    set_servo_position(claw, closed);
+   
+    motor(motr, -speed);
+    motor(motr2, -speed);
+   
+    msleep(105);
+   
+    set_servo_position(claw, opened);
+   
+    return 0;
+}
