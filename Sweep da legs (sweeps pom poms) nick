@@ -1,0 +1,44 @@
+// sweep da legz (sweeps pom poms) nick School year 2024 - 2025
+#include <kipr/wombat.h>
+
+int main()
+{
+   
+    int motr = 0;
+    int motr2 = 3;
+   
+    int arm = 0;
+   
+    int ready = 1875;
+    int swing = 0;
+   
+    enable_servo(arm);
+   
+    motor(motr, -100);
+    motor(motr2, -100);
+   
+    msleep(1000);
+   
+    motor(motr, 0);
+    motor(motr2, 0);
+   
+    set_servo_position(arm, ready);
+   
+    msleep(1000);
+   
+    set_servo_position(arm, swing);
+   
+    msleep(1000);
+   
+    set_servo_position(arm, ready);
+   
+    motor(motr, 0);
+    motor(motr2, 0);
+   
+    msleep(1000);
+   
+    motor(motr, -100);
+    motor(motr2, -100);
+   
+    return 0;
+}
