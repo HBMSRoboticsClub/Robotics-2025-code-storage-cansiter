@@ -1,0 +1,48 @@
+// Slappy drinks nick school year 2024 - 2025
+#include <kipr/wombat.h>
+int main()
+{
+   
+    //int motr = 0;
+    //int motr2 = 3;
+   
+    int arm = 0;
+   
+    int start = 550;
+    int plow = 125;
+   
+    //int ready = 1875;
+    //int swing = 0;
+   
+    enable_servo(arm);
+   
+    set_servo_position(arm, start);
+   
+    msleep(750);
+   
+    set_servo_position(arm, plow);
+   
+    msleep(750);
+   
+    set_servo_position(arm, start);
+   
+    msleep(750);
+   
+    set_servo_position(arm, plow);
+   
+    msleep(750);
+   
+    set_servo_position(arm, start);
+   
+    msleep(750);
+   
+    set_servo_position(arm, plow);
+   
+    msleep(750);
+   
+    set_servo_position(arm, start);
+   
+    msleep(750);
+   
+    return 0;
+}
