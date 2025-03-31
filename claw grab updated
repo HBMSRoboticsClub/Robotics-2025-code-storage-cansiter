@@ -1,0 +1,61 @@
+#include <kipr/wombat.h>
+
+//-----------//
+//Made by NF3//
+//-----------//
+
+// Claw Grab upgraded school year 2024 - 2025
+
+int main()
+{
+    printf("Starting . . .\n");
+    printf("Declaring Variables . . .\n");
+
+    int motr = 0;
+    int motr2 = 1;
+   
+    int deg90 = 1050;
+   
+    int servo1 = 3;
+
+    int timer = 700;
+   
+    int open = 983;
+   
+    int close = 0;
+
+    printf("Start Program . . .\n");
+
+    enable_servo(servo1);
+   
+    set_servo_position(servo1, open);
+   
+    msleep(timer);
+   
+    set_servo_position(servo1, close);
+
+    msleep(timer);
+   
+    msleep(100);
+   
+    motor(motr, -125);
+    motor(motr2, -125);
+   
+    msleep(deg90);
+   
+    motor(motr, 0);
+    motor(motr2, 0);
+   
+    msleep(1000);
+   
+    motor(motr, -100);
+    motor(motr2, 100);
+   
+    msleep(10000);
+   
+    printf("Completed Program . . .\n");
+    printf("Stoping Code . . .\n");
+    printf("Made By NF3\n");
+
+    return 0;
+}
