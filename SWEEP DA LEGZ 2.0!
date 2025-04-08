@@ -1,0 +1,133 @@
+#include <kipr/wombat.h>
+
+int main()
+{
+
+    int m1 = 0;
+    int m2 = 1;
+
+    int arm = 2047;
+
+    int speed = 400;
+
+    int start = 2047;
+    int plow = 2047;
+    int strait = 288;
+
+    //int ready = 2047;
+    //int swing = 0;
+
+    servo_start_pos();
+   
+    msleep(10);
+   
+servo_start_pos();
+   
+    motor(m1, 100);
+   
+    motor(m2, 100);
+   
+    msleep(3000);
+   
+    stop_move();
+   
+   
+    motor(m1, -100);
+   
+    enable_servo(arm);
+   
+    set_servo_position(arm, strait);
+   
+    msleep(4200);
+   
+    stop_move();
+   
+    motor(m1, -100);
+   
+    motor(m2, -100);
+   
+    msleep(1500);
+   
+    servo_strait_pos();
+   
+    stop_move();
+   
+ 
+   
+    motor(m1, 2200);
+   
+    msleep(850);
+   
+    enable_servo(0);
+   
+    set_servo_position(0, 800);
+   
+    return 0;
+}
+
+void backward()
+{
+    int m1 = 0;
+    int m2 = 1;
+
+motor(m1, 100);
+    motor(m2, 100);
+}
+
+void forward()
+{
+    int m1 = 0;
+    int m2 = 1;
+
+motor(m1, -100);
+    motor(m2, -100);
+}
+
+void stop_move()
+{
+int m1 = 0;
+    int m2 = 1;
+   
+    motor(m1, 0);
+    motor(m2, 0);
+
+}
+
+void servo_plow_pos()
+{
+    int arm = 0;
+    int start = 530;
+    int plow = 1050;
+    int strait = 800;
+   
+    enable_servo(arm);
+   
+    set_servo_position(arm, plow);
+   
+}
+
+void servo_start_pos()
+{
+    int arm = 0;
+    int start = 2047;
+    int plow = 1050;
+    int strait = 800;
+   
+    enable_servo(arm);
+   
+    set_servo_position(arm, start);
+   
+}
+
+void servo_strait_pos()
+{
+    int arm = 0;
+    int start = 530;
+    int plow = 1050;
+    int strait = 288;
+   
+    enable_servo(arm);
+   
+    set_servo_position(arm, strait);
+   
+}
