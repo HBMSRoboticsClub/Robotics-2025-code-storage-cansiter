@@ -1,0 +1,156 @@
+#include <kipr/wombat.h>
+//
+// ITS WORKS (SLAPPS STUFF OF SHELF)
+
+#include <kipr/wombat.h>
+int main()
+{
+    smacc_stuff();
+   
+    return 0;
+}
+
+void backward()
+{
+    int m1 = 0;
+    int m2 = 1;
+
+motor(m1, -100);
+    motor(m2, 100);
+}
+
+void forward()
+{
+    int m1 = 0;
+    int m2 = 1;
+
+motor(m1, 100);
+    motor(m2, -100);
+}
+
+void stop_move()
+{
+int m1 = 0;
+    int m2 = 1;
+   
+    motor(m1, 0);
+    motor(m2, 0);
+
+}
+
+void turn_left()
+{
+    int mr = 0;
+    int ml = 1;
+   
+    motor(mr, 250);
+    motor(ml, 250);
+   
+    msleep(1450);
+}
+
+void turn_right()
+{
+    int mr = 0;
+    int ml = 1;
+   
+    motor(mr, -250);
+    motor(ml, -250);
+   
+    msleep(1450);
+}
+
+void wagg()
+{
+int mini_sweeper = 3;
+
+enable_servo(mini_sweeper);
+   
+    set_servo_position(0, 0);
+msleep(1000);
+set_servo_position(0, 1277);
+msleep(1000);
+set_servo_position(0, 461);
+msleep(1000);
+   
+disable_servo(mini_sweeper);
+}
+
+void smacc_stuff()
+{
+int motr1 = 0;
+    int motr2 = 1;
+   
+    int claw = 0;
+    int mini_sweeper = 3;
+   
+    int up_down_motor = 3;
+   
+    enable_servo(claw);
+    msleep(250);
+   
+    motor(3, 0);
+   
+    forward();
+   
+    msleep(1700);
+   
+    msleep(2000);
+   
+    motor(0, -200);
+    motor(1, -200);
+   
+    msleep(3000);
+   
+   
+   
+    msleep(2000);
+
+}
+
+void drive_down()
+{
+   
+    int motr1 = 0;
+    int motr2 = 1;
+   
+    int claw = 0;
+   
+    int up_down_motor = 3;
+   
+    forward();
+   
+    msleep(999);
+   
+    motor(0, -250);
+    motor(1, 250);
+   
+    msleep(999);
+   
+    motor(0, -100);
+    motor(1, -75);
+   
+    msleep(0);
+   
+    forward();
+   
+    msleep(3500);
+   
+    motor(0, -250);
+    motor(1, -250);
+   
+    msleep(350);
+   
+    forward();
+   
+    msleep(1000);
+       
+    motor(0, 250);
+    motor(1, 250);
+   
+    msleep(2000);
+   
+    backward();
+   
+    msleep(1000);
+}
