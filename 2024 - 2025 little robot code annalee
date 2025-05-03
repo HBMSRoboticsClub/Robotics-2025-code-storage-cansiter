@@ -1,0 +1,294 @@
+// little robot code annalee school year 2024 - 2025
+#include <kipr/wombat.h>
+int main()
+{
+    int m1 = 0;
+    int m2 = 1;
+
+    int arm = 0;
+
+    int speed = 400;
+
+    int start = 2047;
+    int plow = 2047;
+    int strait = 487;
+int ready = 0;
+int swing = 1000;
+   
+    wait_for_light(0);
+
+    enable_servo(arm);
+
+    set_servo_position(arm, strait);
+
+    stop_move();
+
+    backward();
+
+    msleep(1100);
+
+    //stop_move();
+
+  //  motor(m1, 100);
+
+   //msleep(200);
+
+    //motor(m2, -100);
+
+   // msleep(200);
+
+    //stop_move();
+
+    motor(m1, -100);
+
+    motor(m2, -100);
+
+    msleep(1230);
+
+    stop_move();
+
+    forward();
+
+    msleep(2500);
+
+    stop_move();
+
+
+   // motor(m1, 100);
+
+    //motor(m2, -100);
+
+     enable_servo(arm);
+
+    set_servo_position(arm, ready);
+
+    msleep(1000);
+
+    set_servo_position(arm, swing);
+
+    msleep(1000);
+
+    stop_move();
+
+    forward();
+
+    msleep(1100);
+
+    stop_move();
+
+     set_servo_position(arm, ready);
+
+    msleep(1000);
+
+    set_servo_position(arm, swing);
+
+    msleep(1000);
+
+   forward();
+
+    msleep(1200);
+
+    stop_move();
+
+
+   // motor(m1, 100);
+
+    //motor(m2, -100);
+
+     enable_servo(arm);
+
+     set_servo_position(arm, ready);
+
+    msleep(1000);
+
+    set_servo_position(arm, swing);
+
+    msleep(1000);
+
+    stop_move();
+
+    forward();
+
+    msleep(1000);
+
+    stop_move();
+
+
+
+    stop_move();
+
+     set_servo_position(arm, ready);
+
+    msleep(1000);
+
+        set_servo_position(arm, swing);
+
+    stop_move();
+
+    forward();
+
+    msleep(1100);
+
+    stop_move();
+
+    set_servo_position(arm, ready);
+
+    msleep(1000);
+
+    stop_move();
+
+    forward();
+
+    msleep(1000);
+
+    stop_move();
+
+    set_servo_position(arm, swing);
+
+    stop_move();
+
+    forward();
+
+    msleep(2000);
+
+    motor(m1, 100);
+
+    motor(m2, 50);
+
+    msleep(1000);
+   
+ motor(m1, -200);
+
+    motor(m2, -200);
+
+    msleep(1030);
+   
+     stop_move();
+   
+    motor(m1, -100);
+
+    motor(m2, -100);
+
+    msleep(1230);
+
+       forward();
+     //set_servo_position(arm, ready);
+
+    //msleep(1000);
+
+    //set_servo_position(arm, swing);
+
+    //msleep(1000);
+
+    //  set_servo_position(arm, ready);
+
+    //et_servo_position(arm, strait);
+
+    //msleep(3000);
+
+   // stop_move();
+
+   // servo_strait_pos();
+
+   // motor(m1, 100);
+
+  //  motor(m2, 100);
+
+    //msleep(3000);
+
+
+   // stop_move();
+
+  //  motor(m1, -25);
+
+  //  motor(m2, -25);
+
+
+    //msleep(200);
+
+   // enable_servo(0);
+
+    //set_servo_position(0, plow);
+
+    //set_servo_position(0, start);
+
+    return 0;
+}
+
+void backward()
+{
+    int m1 = 0;
+    int m2 = 1;
+
+motor(m1, -100);
+    motor(m2, 100);
+}
+
+void forward()
+{
+    int m1 = 0;
+    int m2 = 1;
+
+motor(m1, 100);
+    motor(m2, -100);
+}
+
+void stop_move()
+{
+int m1 = 0;
+    int m2 = 1;
+
+    motor(m1, 0);
+    motor(m2, 0);
+
+}
+
+void servo_plow_pos()
+{
+    int arm = 0;
+    int start = 530;
+    int plow = 1100;
+    int strait = 750;
+
+    enable_servo(arm);
+
+    set_servo_position(arm, plow);
+
+}
+
+void servo_start_pos()
+{
+    int arm = 0;
+    int start = 2047;
+    int plow = 1050;
+    int strait = 750;
+
+    enable_servo(arm);
+
+    set_servo_position(arm, start);
+
+}
+
+void servo_strait_pos()
+{
+    int m1 = 0;
+    int m2 = 1;
+   
+    int arm = 0;
+    int start = 530;
+    int plow = 1050;
+    int strait = 487;
+
+    enable_servo(arm);
+
+    set_servo_position(arm, strait);
+   
+    forward(0);
+   
+    motor(m1, -100);
+
+    motor(m2, -100);
+
+    msleep(1230);
+
+}
