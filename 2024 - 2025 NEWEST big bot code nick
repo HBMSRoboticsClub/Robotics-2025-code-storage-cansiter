@@ -1,0 +1,223 @@
+// NEWEST big bot code nick school year 2024 - 2025
+#include <kipr/wombat.h>
+
+//             //
+//  NF3 RULEZ  //
+// Code by NF3 //
+
+int main()
+{
+    smacc_stuff();
+   
+    return 0;
+}
+
+void backward()
+{
+    int m1 = 0;
+    int m2 = 1;
+
+motor(m1, -100);
+    motor(m2, 100);
+}
+
+void forward()
+{
+    int m1 = 0;
+    int m2 = 1;
+
+motor(m1, 100);
+    motor(m2, -100);
+}
+
+void stop_move()
+{
+int m1 = 0;
+    int m2 = 1;
+   
+    motor(m1, 0);
+    motor(m2, 0);
+
+}
+
+void turn_left()
+{
+    int mr = 0;
+    int ml = 1;
+   
+    motor(mr, 250);
+    motor(ml, 250);
+   
+    msleep(1450);
+}
+
+void turn_right()
+{
+    int mr = 0;
+    int ml = 1;
+   
+    motor(mr, -250);
+    motor(ml, -250);
+   
+    msleep(1450);
+}
+
+void wagg()
+{
+int mini_sweeper = 3;
+
+enable_servo(mini_sweeper);
+   
+    set_servo_position(0, 0);
+msleep(1000);
+set_servo_position(0, 1277);
+msleep(1000);
+set_servo_position(0, 461);
+msleep(1000);
+   
+disable_servo(mini_sweeper);
+}
+
+void smacc_stuff()
+{
+int motr1 = 0;
+    int motr2 = 1;
+   
+    int claw = 0;
+   
+    int up_down_motor = 3;
+   
+    shut_down_in(1800);
+    wait_for_light(0);
+   
+    //move to pos
+    //move_to_position(3, 100, 396);
+   
+    enable_servo(claw);
+    printf("waiting 7 secs\n");
+    //set_servo_position(claw, 3000);
+    msleep(7000);
+   
+   
+   
+    msleep(250);
+    printf("turn\n");
+    motor(0, -80);
+    motor(1, -100);
+   
+    msleep(800);
+   
+    motor(3, 0);
+   
+    forward();
+    printf("TO WAR AGAINST FAST FOOD\n");
+   
+    msleep(4120);
+    printf("SMACC\n");
+    motor(0, -200);
+    motor(1, -200);
+   
+    msleep(100);
+    // continue here: \/
+    printf("Ended");
+   
+    msleep(2000);
+   
+   
+}
+
+void drive_down()
+{
+   
+    int motr = 0;
+    int motr2 = 1;
+   
+    int deg90 = 1050;
+   
+    int servo1 = 3;
+
+    int timer = 700;
+   
+    int open = 983;
+   
+    int close = 0;
+
+    printf("Start Program . . .\n");
+
+   
+   
+    enable_servo(servo1);
+   
+    set_servo_position(servo1, open);
+   
+    msleep(timer);
+   
+    set_servo_position(servo1, close);
+
+    msleep(timer);
+   
+    msleep(100);
+   
+    motor(motr, -125);
+    motor(motr2, -125);
+   
+    msleep(deg90);
+   
+    motor(motr, 0);
+    motor(motr2, 0);
+   
+    msleep(1000);
+   
+    motor(motr, -100);
+    motor(motr2, 100);
+   
+    msleep(10000);
+   
+}
+
+void smacc_an_grab()
+{
+int motr1 = 0;
+    int motr2 = 1;
+   
+    int claw = 0;
+   
+    int up_down_motor = 3;
+   
+    shut_down_in(1800);
+    wait_for_light(0);
+   
+    //move to pos
+    //move_to_position(3, 100, 396);
+   
+    enable_servo(claw);
+    printf("waiting 7 secs\n");
+    //set_servo_position(claw, 3000);
+    msleep(7000);
+   
+   
+   
+    msleep(250);
+    printf("turn\n");
+    motor(0, -80);
+    motor(1, -100);
+   
+    msleep(800);
+   
+    motor(3, 0);
+   
+    forward();
+    printf("TO WAR AGAINST FAST FOOD\n");
+   
+    msleep(4120);
+    printf("SMACC\n");
+    motor(0, -200);
+    motor(1, -200);
+   
+    msleep(100);
+    // continue here: \/
+    printf("Ended");
+   
+    msleep(2000);
+   
+}
